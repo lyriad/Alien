@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
 
     public Text timer;
     public Text score;
-    public Text hp;
 
     public Canvas HUD;
     public Canvas gameOver;
@@ -111,12 +110,5 @@ public class GameManager : MonoBehaviour
         HUD.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(true);
         dead = true;
-    }
-
-    public void updateHp(String hp) {
-
-        this.hp.text = hp;
-    }
-  
-    
+    }    
 }

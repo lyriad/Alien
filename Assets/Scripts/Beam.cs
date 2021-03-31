@@ -43,7 +43,6 @@ public class Beam : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
             gm.applyPoints((int)blon.helium);
-            //Debug.Log("i hit");
         }
     }
 }

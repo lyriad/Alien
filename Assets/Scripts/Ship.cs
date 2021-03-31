@@ -83,9 +83,8 @@ public class Ship : MonoBehaviour
 
                 helium -= 5f;
                 lifeTimer = 0;
+                gm.applyPoints(-5);
             }
-
-        
 
             if (helium <= 0) {
 
@@ -96,13 +95,11 @@ public class Ship : MonoBehaviour
             seconds += Time.deltaTime;
             lifeTimer += Time.deltaTime;
             if (seconds > 60) {
-
                 minutes += 1;
                 seconds = 0;
             }
 
             if (minutes > 60) {
-
                 hours += 1;
                 minutes = 0;
             }
@@ -110,12 +107,7 @@ public class Ship : MonoBehaviour
             String time = hours + ":" + minutes + ":" + (int)seconds;
 
             gm.updateTimer(time);
-            gm.updateHp(helium.ToString());
-
         }
-
-
-        
     }
 
     public void applyHelium(float ox) {
@@ -140,6 +132,4 @@ public class Ship : MonoBehaviour
     {
         this.pause = pause;
     }
-
-
 }
